@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const ID = '@local/llm-ratelimit';  // 必须与 package.json 的 name 一致
+const ID = '@dsh-external/llm-ratelimit';  // 改为 @dsh-external
 
 const source = readFileSync(resolve(root, 'src/client/index.js'), 'utf8');
 
