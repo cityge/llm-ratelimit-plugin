@@ -1,5 +1,5 @@
 {
-  "name": "@local/llm-ratelimit",
+  "name": "@dsh-external/llm-ratelimit",
   "version": "1.0.0",
   "type": "module",
   "main": "lib/index.js",
