@@ -91,10 +91,10 @@ div[class*="_collapsed"] .dsws-sidebar-label{display:none;}
 
 function injectStyles() {
   if (typeof document === 'undefined') return;
-  const tagId = '@local/llm-ratelimit/styles';
+  const tagId = '@dsh-external/llm-ratelimit/styles';
   if (document.querySelector('style[data-plugin-css=' + JSON.stringify(tagId) + ']')) return;
   const tag = document.createElement('style');
-  tag.dataset.plugin = '@local/llm-ratelimit';
+  tag.dataset.plugin = '@dsh-external/llm-ratelimit';
   tag.dataset.pluginCss = tagId;
   tag.textContent = CSS;
   document.head.appendChild(tag);
@@ -233,7 +233,7 @@ function apply(ctx) {
         if (obs) { obs.disconnect(); obs = null; }
         window.clearTimeout(installTimer);
         removeSidebarButton();
-        const s = document.querySelector('style[data-plugin="@local/llm-ratelimit"]');
+        const s = document.querySelector('style[data-plugin="@dsh-external/llm-ratelimit"]');
         if (s) s.remove();
       };
     }, 'llm-ratelimit: 侧栏入口清理');
